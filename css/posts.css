@@ -1,0 +1,58 @@
+body {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+        "header"
+        "body";
+
+    height: 100vh;
+    width: 100vw
+}
+
+
+#header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+        "pfp name back";
+
+    height: 100%;
+    width: 100%;
+
+    border-bottom: 2px solid black;
+}
+
+
+#header img {
+    grid-area: pfp;
+    border-radius: 50%;
+
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin: auto auto auto auto;
+}
+
+
+#header h1 {
+    grid-area: name;
+
+    margin: auto auto auto 1em;
+}
+
+
+#header a {
+    grid-area: back;
+
+    margin: auto auto auto auto;
+}
+
+
+#body {
+    grid-area: body;
+
+    height: 100%;
+    width: 100%;
+}
