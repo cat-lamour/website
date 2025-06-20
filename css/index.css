@@ -1,12 +1,22 @@
 body {
     display: grid;
-    grid-template-rows: 1fr 4fr;
-    grid-template-areas:
-        "header"
-        "body";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "leftbar content rightbar";
 
     height: 100vh;
     width: 100vw
+}
+
+
+#content {
+    grid-area: content;
+
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+        "header"
+        "body"
+        "footer";
 }
 
 
@@ -15,12 +25,12 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-areas:
-        "pfp name";
+    grid-template-areas: "pfp name";
 
     height: 100%;
     width: 100%;
 
+    padding: 0 0 1em 0;
     border-bottom: 2px solid black;
 }
 
@@ -30,8 +40,8 @@ body {
     border-radius: 50%;
 
     display: block;
-    height: 50px;
-    width: 50px;
+    height: 8em;
+    width: 8em;
     margin: auto auto auto auto;
 }
 
@@ -46,20 +56,7 @@ body {
 #body {
     grid-area: body;
 
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas:
-        "leftbar posts rightbar";
-
     height: 100%;
     width: 100%;
-}
-
-
-#body ul {
-    grid-area: posts;
-
-    list-style-type: none;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    margin: 1em auto auto auto;
 }
